@@ -6,3 +6,10 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
+var saveButton = $('#button');
+
+saveButton.on('click', function (event) {
+  // Prevent default action
+  event.preventDefault();
+  
+});
