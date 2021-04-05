@@ -8,7 +8,9 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
-
-
-
-
+$("#button").on("click", function () {
+  // Get nearby values of the description in JQuery
+  var key = $('#hour9');
+var value = $('.descrption');
+localStorage.setItem(key,value)
+})
