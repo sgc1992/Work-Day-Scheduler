@@ -10,7 +10,8 @@ setInterval(displayTime, 1000);
 
 $("#button").on("click", function () {
   // Get nearby values of the description in JQuery
-  var key = $('#hour9');
-var value = $('.descrption');
-localStorage.setItem(key,value)
+  var key = $(this).siblings('#hour9').val();
+  var value = $(this).parent().attr('#text');
+  localStorage.setItem(key, value)
 })
+$("#hour9 .description").val(localStorage.getItem("hour"));
