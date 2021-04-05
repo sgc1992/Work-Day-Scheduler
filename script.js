@@ -8,10 +8,11 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
-$("#button").on("click", function () {
+$(".saveBtn").on("click", function () {
   // Get nearby values of the description in JQuery
-  var key = $(this).siblings('#hour9').val();
-  var value = $(this).parent().attr('#text');
-  localStorage.setItem(key, value)
+  var text = $(this).siblings(".description").val();
+  var time = $(this).parent().attr("id");
+
+  // Save text in local storage
+  localStorage.setItem(time, text);
 })
-$("#hour9 .description").val(localStorage.getItem("hour"));
