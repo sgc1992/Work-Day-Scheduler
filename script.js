@@ -8,11 +8,14 @@ function displayTime() {
 }
 setInterval(displayTime, 1000);
 
-var saveButton = $('#button');
+var form = $('#form');
+var input = $('#text');
+var submit = $('#button');
 
-saveButton.on('click', function (event) {
-  // Prevent default action
-  event.preventDefault();
-});
-submitEl.addEventListener("click");
+submit.onclick = function(event){
+  event.preventDefault()
+  var workDescription = text.value;
+}
+
+
 
